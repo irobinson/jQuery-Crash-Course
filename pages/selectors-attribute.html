@@ -1,0 +1,22 @@
+<a href="pages/selectors-intro.html">Intro</a>
+<a href="pages/selectors-basic.html">Basic</a>
+<a href="pages/selectors-attribute.html">Attribute</a>
+<a href="pages/selectors-form.html">Form</a>
+<a href="pages/selectors-extension.html">Extensions</a>
+
+<h5>Attribute Selectors</h5>
+
+<p>Attribute selectors are helpful to narrow down your selection to only elements of a given type that have an attribute set in a specific way.</p>
+
+<h6>Attribute Selector Examples</h6>
+<pre>
+  $(a[href|="value"]) // contains prefix
+  $(a[href*="value"]) // contains
+  $(a[href~="value"]) // contains word
+  $(a[href$="value"]) // ends with
+  $(a[href="value"])  // equals
+  $(a[href!="value"]) // not equal *
+  $(a[href^="value"]) // starts with
+  $(a[href])          // has attribute
+  $(a[href|="value"]) // multiple
+</pre>

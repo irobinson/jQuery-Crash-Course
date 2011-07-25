@@ -1,0 +1,37 @@
+<p>There are a number of helpful Ajax utilities in jQuery.</p>
+
+<ul>
+  <li>You can do simple get and post actions, as well as more advanced getJSON, getScript actions.</li>
+  <li>Then there is the most low level - jQuery Ajax</li>
+  <li>For use in all types: there are global ajax event handlers for start, stop, error, and success.</li>
+  <li>For ASMX and WCF goodness: check out <a href="http://codepaste.net/i89xhc">Rick Strahl's Service Proxy<a/></li>
+</ul>
+
+<p>A "get" example:</p>
+<pre>
+  $('a[href^="pages"]').live('click', function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var targetUrl = $this.attr('href');
+    $.get(targetUrl, function(result){
+      $('.body').html($(result));
+      $('.intro h2').html($this.text());
+    });
+  });
+</pre>
+
+An "ajax" example from the jquery docs
+<pre>
+  bodyContent = $.ajax({
+        url: "script.php",
+        global: false,
+        type: "POST",
+        data: ({id : this.getAttribute('id')}),
+        dataType: "html",
+        async:false,
+        success: function(msg){
+           alert(msg);
+        }
+     }
+  ).responseText;
+</pre>

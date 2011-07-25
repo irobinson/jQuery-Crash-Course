@@ -1,0 +1,22 @@
+<p>Event delegation is your friend! It can be used to bind events and not kill your performance (like the "live") event.</p>
+
+<ul>
+  <li>Binding events is great.</li>
+  <li>You can use shortcuts or the manual "bind" methods.</li>
+  <li>But what if you are dynamically creating elements?</li>
+  <li>Event delegation to the rescue!</li>
+  <li>Never use the "live" method (it can be *much* slower)</li>
+</ul>
+
+<p>Example:</p>
+<pre>
+  $("table").delegate("td", "hover", function(){
+    $(this).toggleClass("hover");
+  });
+  
+  $(document).delegate("a.external", "click", function() {
+    // logic here...
+  });
+</pre>
+
+<p>Read more here: <a href="http://www.cmlenz.net/archives/2011/06/jquery-event-delegation">jQuery Event Delegation</a></p>

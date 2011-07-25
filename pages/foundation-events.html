@@ -1,0 +1,36 @@
+<p>Rich user experiences rely heavily on events. The user interacts with the browser and we want to perform actions based on their actions.</p>
+
+<p>Some common event practices:</p>
+<ul>
+  <li>Wait to initalize until everything is done loading</li>
+  <li>Show a modal dialog when a link is clicked</li>
+  <li>Perform validation logic as the user is typing</li>
+  <li>Show a submenu when the user hovers over a parent menu</li>
+  <li>Run some validation logic when a form is submitted</li>
+</ul>
+
+<h6>Events</h6>
+<pre>
+// ready
+$(document).ready(function(){
+  // everything is loaded.
+});
+
+$('a').bind('mouseenter mouseleave', function(){
+  // add event logic here...
+});
+
+// click event
+$('a').click(){
+  // add event logic here...
+}
+
+// keyup event
+$('input').keyup(function(){
+  // add event logic here...
+});
+
+$('input').focus(function(){
+  // add event logic here...
+});
+</pre>

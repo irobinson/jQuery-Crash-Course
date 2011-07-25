@@ -1,0 +1,23 @@
+<p>Reduce your lines of code, save your sanity, and (sometimes) increase performance. Chaining is your friend.</p>
+
+<ul>
+  <li>Most jQuery methods (not the static utility methods) return a jQuery object.</li>
+  <li>This "builder" concept allows you to chain actions</li>
+  <li>Don't repeat your selections.</li>
+  <li>When you're about to iterate (i.e. "each") - check to see if chaining will help first</li>
+</ul>
+
+<p>Simple Example:</p>
+<pre>
+  $('#main').find('p:hidden').addClass('showing');
+</pre>
+
+<p>Crazy Example:</p>
+<pre>
+  $('#main')
+    .find('a.external')
+    .click(function(){return confirm('leaving?');})
+    .end()
+    .find('a.internal')
+    .click(function(){return confirm('staying!');});
+</pre>

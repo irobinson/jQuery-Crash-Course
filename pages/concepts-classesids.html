@@ -1,0 +1,10 @@
+<p>Which selectors should you use? What are the best for performance? How about maintainability?</p>
+
+<ul>
+  <li>Keep selectors as simple as possible</li>
+  <li>Selecting an element by its ID will be the fastest.</li>
+  <li>But, classes are general simpler and easier to maintain versus using IDs everywhere. (<a href="http://oli.jp/2011/ids/">more reading</a>)</li>
+  <li>Modern browsers can use querySelectorAll for CSS queries.</li>
+  <li>But, jQuery Extensions do not use querySelectorAll. From the docs: "first select some elements using a pure CSS selector, then use .filter()."</li>
+  <li>If it makes sense, use a simple selector, and then do a "find" on it with the more complex selector inside.</li>
+</ul>

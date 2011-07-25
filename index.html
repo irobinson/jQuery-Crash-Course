@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>jQuery Crash Course</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="page">
+
+<!-- wrapper -->
+<div class="rapidxwpr floatholder">
+
+  <!-- main body -->
+  <div id="middle">
+  
+    <!-- left column -->
+    <div id="left" class="clearingfix">
+    
+      <h1><a href="index.html">jQuery Crash Course</a></h1>
+      <h5 class="subtitle">Ian Robinson</h5>
+            
+      <!-- menu -->
+      <div class="menu">
+      <h6 class="subtitle">Agenda</h6>
+        <ul>
+          <li><a href="index.html">Intro</a></li>
+          <li><a href="pages/whatandwhy.html">What and Why?</a></li>
+          <li>
+            <a href="pages/foundations.html">jQuery Foundations</a>
+            <ul>
+              <li><a href="pages/foundation-core.html">Core</a><li>
+              <li><a href="pages/selectors-intro.html">Selectors</a><li>
+              <li><a href="pages/foundation-attributes.html">Attributes</a><li>
+              <li><a href="pages/foundation-traversing.html">Traversing</a><li>
+              <li><a href="pages/foundation-manipulation.html">Manipulation</a><li>
+              <li><a href="pages/foundation-events.html">Events</a><li>
+              <li><a href="pages/foundation-animations.html">Animations</a><li>
+              <li><a href="pages/foundation-utilties.html">Utilities</a><li>
+              <li><a href="pages/foundation-ajax.html">Ajax</a><li>
+            </ul>
+          </li>
+          <li>
+            <a href="pages/concepts-intro.html">Concepts & Techniques</a>
+            <ul>
+              <li><a href="pages/concepts-loadingjquery.html">Loading jQuery</a><li>
+              <li><a href="pages/concepts-init.html">Initialization</a><li>
+              <li><a href="pages/concepts-classesids.html">Selectors</a><li>
+              <li><a href="pages/concepts-caching.html">Caching</a><li>
+              <li><a href="pages/concepts-chaining.html">Chaining</a><li>
+              <li><a href="pages/concepts-delegation.html">Event delegation</a><li>
+              <li><a href="pages/concepts-state.html">Storing state</a><li>
+            </ul>
+          </li>
+          <li><a href="pages/resources.html">Links & Resources</a></li>
+        </ul>
+      </div>
+      <!-- / menu -->
+    
+    </div>
+    <!-- / left column -->
+    
+    <!-- content column -->
+    <div id="main">
+      <div class="intro">
+      <h2>Introduction</h2>
+      </div>
+      <div id="main_container" class="clearingfix">
+        <div id="mainmiddle" class="floatbox withright">
+        
+          <!-- body-->
+          <div class="body">
+            
+            <p>
+            <img src="images/ian.jpg" /><br/>
+            <p>I <span style="color:red;">&lt;3</span> jQuery</P>
+            CV <a href="http://careers.stackoverflow.com/ianrobinson">careers.stackoverflow.com/ianrobinson</a><br/>
+            Twitter <a href="http://twitter.com/irobinson">@irobinson</a><br/>
+            GitHub: <a href="http://github.com/irobinson">irobinson</a>
+            </p>
+            
+          </div>
+          <!-- body -->
+        
+        </div>
+      </div>
+    </div>
+    <!-- / content column -->
+  
+  </div>
+  <!-- / main body -->
+  
+  <!-- footer -->
+  <div id="footer">
+    
+  </div>
+  <!-- / footer -->
+
+</div>
+<!-- / wrapper -->
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")</script>
+  
+  <script type="text/javascript">
+    $('a[href^="pages"]').live('click', function(e){
+      e.preventDefault();
+      var $this = $(this);
+      var targetUrl = $this.attr('href');
+      $.get(targetUrl, function(result){
+        $('.body').html($(result));
+        $('.intro h2').html($this.text());
+      });
+    });
+  </script>
+
+</body>
+</html>

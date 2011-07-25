@@ -1,0 +1,17 @@
+<p>Simple tip: save stuff that is used more than once in a variable.</p>
+
+<ul>
+  <li>Don't bother storing anything that is only used once.</li>
+  <li>A common convention is to begin variable names with a $ when it will contain a jQuery object.</li>
+  <li>Sometimes it's helpful to disambiguate "this" by giving it a real name.</li>
+</ul>
+
+<p>Simple Example:</p>
+<pre>
+  $('.image').click(function(e){
+    e.preventDefault();
+    var $clickedImage = $(this);
+    ...
+  });
+</pre>
+

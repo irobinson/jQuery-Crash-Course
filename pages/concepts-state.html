@@ -1,0 +1,22 @@
+<p>Storing light-weight UI state can be helpful in a number of cases. Two of the most common are described below:</p>
+
+<ul>
+  <li>When you don't want to tie CSS style to your JavaScript.</li>
+  <li>When you'd like to store values somewhere out of site, to be used later.</li>
+</ul>
+
+<p>Store state as a CSS class</p>
+<pre>
+  $('#menu').hover(function() {
+    $(this).toggleClass('hover');
+  });
+</pre>
+
+<p>Store state as jQuery data</p>
+<pre>
+  // set
+  $('selector').data('key', 'value');
+  
+  //get
+  $('selector').data('key');
+</pre>

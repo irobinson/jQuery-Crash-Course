@@ -1,0 +1,39 @@
+<p>When you're adding your jQuery script to a project. There are a few important things to consider.</p>
+
+<ul>
+  <li>Avoid global scope.</li>
+  <li>Make sure you safely access the $ object</li>
+  <li>Wire up on document ready, if appropriate</li>
+  <li>Use update panels? Make sure you account for them as well.</li>
+</ul>
+
+<p>Basic requirements</p>
+<pre>
+  // avoid global scope & safely access $
+  (function($) {
+   // your initialization code here...
+  })(jQuery);
+</pre>
+
+<p>More complex requirements</p>
+<pre>
+/* globals jQuery, window, Sys */
+(function ($, Sys) {
+
+    function setUpMyModule() {
+        // your initialization code here...
+    }
+    
+    $(document).ready(function () {
+    
+        setUpMyModule();
+        
+        Sys.WebForms.PageRequestManager
+          .getInstance()
+          .add_endRequest(function(){
+            setUpMyModule();
+        });
+    });
+    
+} (jQuery, window.Sys));
+</pre>
