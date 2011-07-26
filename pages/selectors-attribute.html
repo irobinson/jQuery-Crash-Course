@@ -4,8 +4,6 @@
 <a href="pages/selectors-form.html">Form</a>
 <a href="pages/selectors-extension.html">Extensions</a>
 
-<h5>Attribute Selectors</h5>
-
 <p>Attribute selectors are helpful to narrow down your selection to only elements of a given type that have an attribute set in a specific way.</p>
 
 <h6>Attribute Selector Examples</h6>
@@ -18,5 +16,5 @@
   $(a[href!="value"]) // not equal *
   $(a[href^="value"]) // starts with
   $(a[href])          // has attribute
-  $(a[href|="value"]) // multiple
+  $(a[href="value"][id]) // multiple
 </pre>

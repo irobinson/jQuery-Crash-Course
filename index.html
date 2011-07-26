@@ -36,7 +36,7 @@
               <li><a href="pages/foundation-manipulation.html">Manipulation</a><li>
               <li><a href="pages/foundation-events.html">Events</a><li>
               <li><a href="pages/foundation-animations.html">Animations</a><li>
-              <li><a href="pages/foundation-utilties.html">Utilities</a><li>
+              <li><a href="pages/foundation-utilities.html">Utilities</a><li>
               <li><a href="pages/foundation-ajax.html">Ajax</a><li>
             </ul>
           </li>
@@ -99,12 +99,11 @@
 </div>
 <!-- / wrapper -->
 
-<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")</script>
   
   <script type="text/javascript">
-    $('a[href^="pages"]').live('click', function(e){
+    $(document).delegate('a[href^="pages"]', 'click', function(e){
       e.preventDefault();
       var $this = $(this);
       var targetUrl = $this.attr('href');
