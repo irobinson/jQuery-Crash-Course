@@ -204,7 +204,7 @@ div.menu a {
     display:block;
     position:relative;
     padding:0;
-    overflow:hidden;
+    /*overflow:hidden;*/
     width:222px;
 }
 
