@@ -204,8 +204,9 @@ div.menu a {
     display:block;
     position:relative;
     padding:0;
-    /*overflow:hidden;*/
+    overflow:hidden;
     width:222px;
+    clear:both;
 }
 
 div.intro {padding:0 40px 20px 170px;}
